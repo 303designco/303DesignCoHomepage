@@ -35,8 +35,8 @@ body {
 
 .navbar .floating-logo img {
     position: absolute;
-    left: 50px;
-    top: 10px;
+    left: 0px;
+    top: 0px;
     height: 105px;
     width: 150px;
 }
@@ -123,4 +123,56 @@ body {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-/*TODO: make media breakpoints.*/
+/* anything smaller than 800px makes logo look like shit.*/
+@media only screen
+and (min-width : 800px) {
+    .navbar .floating-logo img {
+        position: absolute;
+        left: 50px;
+        top: 10px;
+        height: 105px;
+        width: 150px;
+    }
+}
+@media only screen
+and (max-width : 700px) {
+    #centeredmenu {
+        float: right;
+        width: 100%;
+        position: relative;
+        height: 50px;
+        font-size: 20px;
+        font-family: arial, sans-serif;
+    }
+
+    #centeredmenu ul {
+        clear: left;
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: 0%;
+        text-align: center;
+    }
+
+    #centeredmenu ul li {
+        display: block;
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        right: 0%;
+    }
+}
+@media only screen
+and (max-width : 580px) {
+    .navbar .floating-logo img {
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 69px;
+        width: 100px;
+    }
+}
